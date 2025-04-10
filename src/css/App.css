@@ -1,0 +1,400 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins";
+}
+
+/* chatgpt should create an image for profile plus that will be in a phone like manner for registration, login, and filling of form to save data */
+
+:root {
+  --bg-color: rgb(58, 125, 243);
+  --main-color: #ffffff;
+  --black-color: #000;
+  --tilt-angle: 15deg;
+  --red: red;
+}
+
+/* home */
+
+#wrapper {
+  /* background: linear-gradient(to right, #2575fc, #6a11cb); */
+  background-color: var(--bg-color);
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.phone-frame {
+  width: 400px;
+  height: 600px;
+  border: 16px solid #000;
+  border-radius: 40px;
+  padding: 1%;
+  background-color: #111;
+  position: relative;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+  transform: rotateZ(15deg);
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+}
+
+.phone-frame:hover {
+  transform: rotateX(5deg);
+}
+
+.phone-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* Hero page styling */
+#hero-page {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animations */
+
+/* Fade in effect for both container and images */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Rotating container */
+@keyframes rotateContainer {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Slide images upward */
+@keyframes slideUp {
+  0% {
+    transform: translateY(30px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+.welcome-hero-text {
+  font-size: 3.5em;
+  font-weight: 900;
+  font-style: bold;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100vh;
+  justify-content: center;
+  align-items: flex-start;
+  color:var(--main-color);
+  margin: auto;
+}
+
+.welcome-hero-text1 {
+  font-size: 1.5em;
+  font-weight: 700;
+  font-style: bold;
+}
+
+.hero-div1,
+.hero-div2 {
+  margin-top: 4%;
+}
+
+.btn-a {
+  text-decoration: none;
+  color: var(--bg-color);
+}
+
+.heroBtn {
+  border: none;
+  background-color: transparent;
+  font-size: 1em;
+  font-weight: 600;
+  padding: 10px 55px;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.heroBtn:hover {
+  text-decoration: none;
+  color: white;
+  padding: 10px 55px;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 2px solid white;
+}
+
+/* form.html */
+
+#form-wrapper {
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.bg {
+  background-color: var(--bg-color);
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.bg h1 {
+  font-size: 5em;
+  margin-top: 20%;
+  position: fixed;
+  color: white;
+}
+
+.form-div {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f8f8;
+  padding-top: 2%;
+}
+
+.form-div form {
+  width: 60%;
+  margin: auto;
+}
+
+.form-div form p {
+  margin-top: 3%;
+}
+
+.btnForm {
+  background: var(--bg-color);
+  color: white;
+  width: 100%;
+  border: none;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 24px;
+}
+
+.btnForm:hover {
+  background: white;
+  color: var(--bg-color);
+  border: 1px solid rgb(58, 125, 243);
+}
+
+/* register */
+
+.reg-img-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.reg-phone-frame {
+  width: 400px;
+  height: 600px;
+  border: 16px solid #000;
+  border-radius: 40px;
+  padding: 1%;
+  background-color: #111;
+  position: relative;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+  transform: rotateZ(15deg);
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+}
+
+.reg-phone-frame:hover {
+  transform: rotateX(5deg);
+}
+
+.reg-phone-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.reg-form {
+  width: 100%;
+  display: flex;
+  position: relative;
+  height: 100vh;
+}
+
+.pswd-input-div{
+  display: flex;
+  position: relative;
+}
+
+.pswdBtn{
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 0;
+  margin-right: 2%;
+  margin-top: 1.5%;
+}
+
+.reg-form form {
+  width: 60%;
+}
+
+.reg-submit-btn {
+  padding-top: 5%;
+}
+
+.text-deco {
+  text-decoration: none;
+}
+
+.reg-form-div {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f8f8;
+  padding-top: 2%;
+}
+
+/* login */
+
+.error-message{
+  color: var(--red);
+}
+
+/* footer.html */
+
+footer {
+  color: #ffff;
+  text-align: center;
+}
+
+/* formdata.html */
+
+.edit-share-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#editBtn,
+#shareBtn {
+  background-color: #ffffff;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 5px;
+}
+
+#displayData {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  margin: auto;
+  margin-top: 2%;
+}
+
+.img {
+  border: 5px solid rgb(58, 125, 243);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.formdata-div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to left, #6a11cb, #2575fc);
+  padding-bottom: 5%;
+}
+
+.data-a {
+  width: 30%;
+  text-decoration: none;
+
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+
+.ptag {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 2px solid rgb(58, 125, 243);
+  padding: 2%;
+}
+
+.ptag:hover {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+}
+
+.data-a i {
+  font-size: 1.5em;
+}
+
+.data-ab i {
+  font-size: 1.5em;
+}
+
+.white {
+  color: #ffffff;
+}
+
+.gender {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+  color: black;
+  margin: auto;
+}
+
+.gender i {
+  font-size: 1.5em;
+  color: black;
+}
