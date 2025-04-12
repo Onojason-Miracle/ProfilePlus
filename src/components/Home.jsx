@@ -1,30 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-
-
-
 function Home() {
   return (
     <>
       <header id="wrapper">
         <section id="hero-page">
           <div className="image-container">
-
-          <div className="phone-frame">
-            <img
-              src="https://res.cloudinary.com/blackgirlmagic/image/upload/v1744022078/profilePlus/ChatGPT_Image_Apr_7_2025_11_15_49_AM_d4po7a.png"
-              alt="hero page 2"
-              className="phone-image"
-            />
+            <div className="phone-frame">
+              <img
+                src="https://res.cloudinary.com/blackgirlmagic/image/upload/v1744022078/profilePlus/ChatGPT_Image_Apr_7_2025_11_15_49_AM_d4po7a.png"
+                alt="hero page 2"
+                className="phone-image"
+              />
             </div>
-
-        
-          
-
-           
-
-
           </div>
 
           <div className="text">
@@ -61,6 +50,3 @@ function Home() {
 }
 
 export default Home;
-
-
-

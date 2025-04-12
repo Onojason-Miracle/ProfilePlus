@@ -131,13 +131,14 @@
 
 // export default Login;
 
-
 import React, { useState } from "react";
-import { signInWithEmailAndPassword , sendPasswordResetEmail } from "firebase/auth";
+import {
+  signInWithEmailAndPassword,
+  sendPasswordResetEmail,
+} from "firebase/auth";
 import { auth } from "../firebase";
 import { useNavigate, Link } from "react-router-dom";
 import Google from "./Google";
-
 
 const PasswordInput = ({ value, onChange }) => {
   const [showPassword, setShowPassword] = useState(false);
@@ -178,7 +179,7 @@ function Login() {
       await signInWithEmailAndPassword(auth, email, password);
       navigate("/form");
     } catch (error) {
-      if ( error.code === "auth/invalid-credential") {
+      if (error.code === "auth/invalid-credential") {
         setErrorMsg("Incorrect password or email. Please try again! ");
       } else if (error.code === "auth/user-not-found") {
         setErrorMsg("There is no existing user record. Please register first.");
@@ -190,7 +191,7 @@ function Login() {
     }
   };
 
-    const handleForgotPassword = async () => {
+  const handleForgotPassword = async () => {
     const emailPrompt = prompt("Enter your email to reset password:");
     if (!emailPrompt) return;
 
@@ -206,17 +207,19 @@ function Login() {
     <section className="reg-form">
       <div className="bg">
         <div className="reg-img-div">
-          <div className="reg-phone-frame">
+          <div className="log-phone-frame">
             <img
-              src="https://res.cloudinary.com/blackgirlmagic/image/upload/v1744022078/profilePlus/ChatGPT_Image_Apr_7_2025_11_15_49_AM_d4po7a.png"
+              src="https://res.cloudinary.com/blackgirlmagic/image/upload/v1744457789/profilePlus/ChatGPT_Image_Apr_12_2025_12_32_55_PM_y1kirs.png"
               alt="Login visual"
-              className="reg-phone-image"
+              className="log-phone-image"
             />
           </div>
         </div>
       </div>
 
       <div className="reg-form-div">
+        <h1 className="form-div-heading">Login</h1>
+        <p></p>
         <form className="form" onSubmit={handleLogin}>
           <p className="form-group">
             <label className="form-label">Email:</label>
@@ -232,7 +235,10 @@ function Login() {
 
           <p className="form-group">
             <label className="form-label">Password:</label>
-            <PasswordInput value={password} onChange={(e) => setPassword(e.target.value)} />
+            <PasswordInput
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
           </p>
 
           {errorMsg && <p className="error-message">{errorMsg}</p>}
@@ -243,8 +249,9 @@ function Login() {
         </form>
 
         {/* Google Login */}
-                  <Google mode="login" />
-         <p className="forgot-password">
+        <Google mode="login" />
+
+        <p className="forgot-password">
           <button
             type="button"
             onClick={handleForgotPassword}
@@ -266,4 +273,3 @@ function Login() {
 }
 
 export default Login;
-

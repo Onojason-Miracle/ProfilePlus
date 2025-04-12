@@ -1,4 +1,3 @@
-
 // import { initializeApp } from "firebase/app";
 // import { getAuth } from "firebase/auth";
 
@@ -8,7 +7,7 @@
 //   projectId: "profileplus-928b6",
 //   storageBucket: "profileplus-928b6.appspot.com",
 //   messagingSenderId: "698882773540",
-//   appId: "YOUR_APP_ID" 
+//   appId: "YOUR_APP_ID"
 // const app = initializeApp(firebaseConfig);
 // const auth = getAuth(app);
 
@@ -17,7 +16,10 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getAuth } from "firebase/auth"
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -30,12 +32,14 @@ const firebaseConfig = {
   storageBucket: "profileplus-928b6.firebasestorage.app",
   messagingSenderId: "698882773540",
   appId: "1:698882773540:web:e257f3c284d2e767f6feb1",
-  measurementId: "G-7RP10KNH1V"
+  measurementId: "G-7RP10KNH1V",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const auth = getAuth(app);
+const db = getFirestore(app);
+const storage = getStorage(app);
 
-export { auth };
+export { auth, db, storage };

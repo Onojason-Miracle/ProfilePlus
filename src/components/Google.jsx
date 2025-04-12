@@ -27,10 +27,17 @@ const Google = ({ mode = "login" }) => {
   };
 
   return (
-    <div>
-      <button onClick={handleGoogleSignIn} disabled={loading} className="google-btn">
-        <i className="fa-brands fa-google"></i>
-        {` ${googleButtonText()}`}
+    <div className="google-btn-div">
+      <button
+        onClick={handleGoogleSignIn}
+        disabled={loading}
+        className="google-btn"
+      >
+        <img
+          src="https://res.cloudinary.com/blackgirlmagic/image/upload/v1744457763/profilePlus/Best_Hotel_Booking_Sites__to_Find_Cheap_Deals_in_2021_-removebg-preview_uhtnd8.png"
+          alt="google logo"
+        />
+        <span className="google-text">{googleButtonText()}</span>
       </button>
     </div>
   );
